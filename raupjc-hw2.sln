@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak3", "Zadatak3\Zadata
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak4", "Zadatak4\Zadatak4.csproj", "{2CA2FDA0-15B7-4C67-8030-D73EB7D695B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak5", "Zadatak5\Zadatak5.csproj", "{D5B58FCD-FEFE-4231-B2D3-27D695F8B29B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primjer", "Primjer\Primjer.csproj", "{3F264B35-8C6F-47BA-96FE-1093BB0B221B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2CA2FDA0-15B7-4C67-8030-D73EB7D695B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CA2FDA0-15B7-4C67-8030-D73EB7D695B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CA2FDA0-15B7-4C67-8030-D73EB7D695B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B58FCD-FEFE-4231-B2D3-27D695F8B29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B58FCD-FEFE-4231-B2D3-27D695F8B29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B58FCD-FEFE-4231-B2D3-27D695F8B29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B58FCD-FEFE-4231-B2D3-27D695F8B29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F264B35-8C6F-47BA-96FE-1093BB0B221B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F264B35-8C6F-47BA-96FE-1093BB0B221B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F264B35-8C6F-47BA-96FE-1093BB0B221B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F264B35-8C6F-47BA-96FE-1093BB0B221B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
