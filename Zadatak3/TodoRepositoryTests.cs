@@ -127,6 +127,7 @@ namespace Zadatak3
             repository.Update(todoItem);
 
             Assert.AreEqual("Cloth", repository.Get(todoItem.Id).Text);
+            Assert.AreEqual(1, repository.GetAll().Count);
         }
 
     }
