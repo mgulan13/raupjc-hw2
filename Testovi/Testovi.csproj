@@ -48,6 +48,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Zadatak4.cs" />
     <Compile Include="Zadatak1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\Zadatak1\Zadatak1.csproj">
       <Project>{2b4bc685-d487-4d85-a73b-64fe7fdd2476}</Project>
       <Name>Zadatak1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zadatak4\Zadatak4.csproj">
+      <Project>{2ca2fda0-15b7-4c67-8030-d73eb7d695b2}</Project>
+      <Name>Zadatak4</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
