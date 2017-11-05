@@ -116,5 +116,18 @@ namespace Zadatak3
             Assert.AreEqual(1, repository.GetCompleted().Count);
         }
 
+        [TestMethod]
+        public void UpdateItem()
+        {
+            ITodoRepository repository = new TodoRepository();
+            var todoItem = new TodoItem("Groceries");
+            repository.Add(todoItem);
+
+            todoItem.Text = "Cloth";
+            repository.Update(todoItem);
+
+            Assert.AreEqual("Cloth", repository.Get(todoItem.Id).Text);
+        }
+
     }
 }

@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DataStorage;
 
 namespace Zadatak2
 {
     /// <summary>
-    /// Class that encapsulates all the logic for accessing TodoTtems .
+    ///     Class that encapsulates all the logic for accessing TodoTtems .
     /// </summary>
     public class TodoRepository : ITodoRepository
     {
         /// <summary>
-        /// Repository does not fetch todoItems from the actual database,
-        /// it uses in memory storage for this excersise.
+        ///     Repository does not fetch todoItems from the actual database,
+        ///     it uses in memory storage for this excersise.
         /// </summary>
         private readonly IGenericList<TodoItem> _inMemoryTodoDatabase;
 
@@ -26,13 +27,9 @@ namespace Zadatak2
         public TodoItem Add(TodoItem todoItem)
         {
             if (todoItem == null)
-            {
                 throw new ArgumentNullException();
-            }
             if (_inMemoryTodoDatabase.Contains(todoItem))
-            {
-                throw new DuplicateTodoItemException();
-            }
+                throw new DuplicateTodoItemException($"duplicate id: {todoItem.Id}");
 
             _inMemoryTodoDatabase.Add(todoItem);
             return todoItem;
@@ -65,11 +62,9 @@ namespace Zadatak2
 
         public bool MarkAsCompleted(Guid todoId)
         {
-            TodoItem item = Get(todoId);
+            var item = Get(todoId);
             if (item == null || item.IsCompleted)
-            {
                 return false;
-            }
 
             item.MarkAsCompleted();
             return true;
@@ -77,11 +72,9 @@ namespace Zadatak2
 
         public bool Remove(Guid todoId)
         {
-            TodoItem item = Get(todoId);
+            var item = Get(todoId);
             if (item == null)
-            {
                 return false;
-            }
 
             _inMemoryTodoDatabase.Remove(item);
             return true;
@@ -90,9 +83,7 @@ namespace Zadatak2
         public TodoItem Update(TodoItem todoItem)
         {
             if (todoItem == null)
-            {
                 return null;
-            }
 
             _inMemoryTodoDatabase.Remove(todoItem);
             _inMemoryTodoDatabase.Add(todoItem);

@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zadatak2
 {
     public class TodoItem
     {
-        public Guid Id { get; set; }
-        public string Text { get; set; }
-        public DateTime? DateCompleted { get; set; }
-        public DateTime DateCreated { get; set; }
-
-        public bool IsCompleted => DateCompleted.HasValue;
-
         public TodoItem(string text)
         {
             // Generates new unique identifier
@@ -27,6 +16,13 @@ namespace Zadatak2
             DateCreated = DateTime.UtcNow;
             Text = text;
         }
+
+        public Guid Id { get; set; }
+        public string Text { get; set; }
+        public DateTime? DateCompleted { get; set; }
+        public DateTime DateCreated { get; set; }
+
+        public bool IsCompleted => DateCompleted.HasValue;
 
         public bool MarkAsCompleted()
         {
@@ -47,7 +43,7 @@ namespace Zadatak2
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((TodoItem) obj);
         }
 
